@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080c14">
+  <title>Chapter 03: Caloric Balance & TDEE Calculations | BODY RECOMP OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="terminal-header">
+    <div class="header-inner">
+      <div class="brand-section">
+        <div class="brand-logo-icon">⚡</div>
+        <div class="brand-title-wrap">
+          <div class="brand-title-line">
+            <a href="index.html">BODY RECOMP</a>
+            <span class="version-tag">V2.0</span>
+          </div>
+          <div class="brand-subtitle">Hypertrophy & Fat Loss Terminal • 184 CM / 85 KG</div>
+        </div>
+      </div>
+      <div class="terminal-status-group">
+        <div class="status-badge"><span class="status-dot"></span><span>RECOMP ACTIVE</span></div>
+        <div class="status-badge amber"><span class="status-dot"></span><span>180G PROTEIN LOCKED</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="terminal-nav-bar" aria-label="Terminal Navigation">
+    <div class="nav-pills-container">
+      <a href="index.html" class="nav-pill-btn"><span>📊</span> Command Center</a>
+      <a href="chapter01-welcome.html" class="nav-pill-btn"><span>🧭</span> Ch 1: Welcome</a>
+      <a href="chapter02-science.html" class="nav-pill-btn"><span>🔬</span> Ch 2: Science</a>
+      <a href="chapter03-nutrition.html" class="nav-pill-btn active"><span>⚖️</span> Ch 3: TDEE</a>
+      <a href="chapter04-macro-guide.html" class="nav-pill-btn"><span>🥩</span> Ch 4: Macros</a>
+      <a href="chapter05-meal-plan.html" class="nav-pill-btn"><span>🍽️</span> Ch 5: Meal Plan</a>
+      <a href="chapter06-recipes.html" class="nav-pill-btn"><span>👨‍🍳</span> Ch 6: Indian Recipes</a>
+      <a href="chapter07-grocery.html" class="nav-pill-btn"><span>🛒</span> Ch 7: Grocery</a>
+      <a href="chapter08-meal-prep.html" class="nav-pill-btn"><span>⏱️</span> Ch 8: Meal Prep</a>
+      <a href="chapter09-office-nutrition.html" class="nav-pill-btn"><span>💼</span> Ch 9: Office Tactics</a>
+      <a href="chapter10-workout.html" class="nav-pill-btn"><span>🏋️</span> Ch 10: 4-Day Split</a>
+      <a href="chapter11-exercise-library.html" class="nav-pill-btn"><span>📖</span> Ch 11: Exercises</a>
+      <a href="chapter12-recovery.html" class="nav-pill-btn"><span>🌙</span> Ch 12: Sleep</a>
+      <a href="chapter13-supplements.html" class="nav-pill-btn"><span>💊</span> Ch 13: Supps</a>
+      <a href="chapter14-progress.html" class="nav-pill-btn"><span>📏</span> Ch 14: Progress</a>
+      <a href="chapter15-faq.html" class="nav-pill-btn"><span>❓</span> Ch 15: FAQ</a>
+      <a href="chapter16-maintenance.html" class="nav-pill-btn"><span>🏖️</span> Ch 16: Maintenance</a>
+      <a href="chapter17-scorecard.html" class="nav-pill-btn"><span>📋</span> Ch 17: Scorecard</a>
+      <a href="references.html" class="nav-pill-btn"><span>📚</span> References</a>
+    </div>
+  </nav>
+
+  <main class="main-terminal-container">
+    <article class="chapter-article-card">
+      <div class="chapter-header">
+        <span class="chapter-badge">CHAPTER 03 • ENERGY BALANCE</span>
+        <h1 class="chapter-title">Caloric Balance & TDEE Calculations</h1>
+        <div class="chapter-quote">"Energy balance dictates your body mass trend; macronutrient partition dictates whether that mass is muscle or fat."</div>
+      </div>
+
+      <div class="chapter-content">
+        <h3>🧮 Step 1: Calculating Your Basal Metabolic Rate (BMR)</h3>
+        <p>Using the gold-standard <strong>Mifflin-St Jeor Equation</strong> for a male at 184 cm and 85 kg (age ~30):</p>
+        <p style="font-family: var(--font-mono); background:#090e1a; padding:0.75rem 1rem; border-radius:8px; border:1px solid var(--border-subtle); color:#60a5fa;">
+          BMR = (10 × 85) + (6.25 × 184) - (5 × 30) + 5 = 850 + 1150 - 150 + 5 = 1,855 kcal/day
+        </p>
+
+        <h3>🏃‍♂️ Step 2: Total Daily Energy Expenditure (TDEE)</h3>
+        <p>For a 4-day gym lifting schedule combined with an 8,000–10,000 daily step count, your Physical Activity Level (PAL) multiplier is <strong>1.375</strong>:</p>
+        <p style="font-family: var(--font-mono); background:#090e1a; padding:0.75rem 1rem; border-radius:8px; border:1px solid var(--border-subtle); color:#34d399;">
+          TDEE (Maintenance) = 1,855 × 1.375 ≈ 2,550 kcal/day
+        </p>
+
+        <h3>🎯 Step 3: Calorie Cycling Protocol</h3>
+        <p>Instead of eating a flat number every day, we cycle energy intake to match metabolic demand:</p>
+        <ul>
+          <li><strong>Training Days (4 Days / Wk):</strong> <strong>2,250 – 2,300 kcal</strong> (fuel gym performance, maximize glycogen and intracellular muscle pump).</li>
+          <li><strong>Rest Days (3 Days / Wk):</strong> <strong>1,950 – 2,000 kcal</strong> (maximize fat oxidation and insulin sensitivity).</li>
+          <li><strong>Weekly Deficit:</strong> -2,925 kcal/week ≈ <strong>-0.38 kg fat lost per week (~1.5 kg/month)</strong>.</li>
+        </ul>
+
+        <div class="terminal-callout">
+          <div class="callout-title">💧 Intracellular Hydration Standard</div>
+          Drink <strong>3.5 to 4.0 Litres of plain water daily</strong>. Add 1/4 tsp pink Himalayan salt to your pre-workout bottle 30 minutes before training to optimize vascular pump and muscle contractility.
+        </div>
+      </div>
+
+      <div class="chapter-pager">
+        <a href="chapter02-science.html" class="pager-btn">← Ch 2: Science</a>
+        <a href="chapter04-macro-guide.html" class="pager-btn">Ch 4: Macro Protocol →</a>
+      </div>
+    </article>
+  </main>
+
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-nav-btn"><span class="icon">📊</span><span>Dashboard</span></a>
+    <a href="chapter03-nutrition.html" class="mobile-nav-btn active"><span class="icon">⚖️</span><span>TDEE</span></a>
+    <a href="chapter05-meal-plan.html" class="mobile-nav-btn"><span class="icon">🍽️</span><span>Meals</span></a>
+    <a href="chapter10-workout.html" class="mobile-nav-btn"><span class="icon">🏋️</span><span>Gym</span></a>
+    <a href="chapter17-scorecard.html" class="mobile-nav-btn"><span class="icon">📋</span><span>Audit</span></a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

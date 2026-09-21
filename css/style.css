@@ -1,7 +1,7 @@
 /* ==========================================================================
    RECOMP TERMINAL OS - HIGH-TECH DARK UI THEME
    Inspired by Nifty Quant V2.0 Terminal Aesthetic
-   Mobile-First, Precision Data, Rich Dark Surfaces
+   Mobile-First, Precision Data, Rich Dark Surfaces, Indian Recipe Support
    ========================================================================== */
 
 :root {
@@ -63,6 +63,16 @@ body {
   padding-bottom: 85px;
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
 /* --- Top Header (Terminal Style) --- */
 .terminal-header {
   background-color: var(--bg-header);
@@ -114,7 +124,7 @@ body {
   gap: 0.5rem;
 }
 
-.brand-title-line h1 {
+.brand-title-line h1, .brand-title-line a {
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -212,11 +222,15 @@ body {
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.5);
 }
 
-/* --- Horizontal Tab Pills (Matching Screenshot) --- */
+/* --- Horizontal Tab Pills Bar --- */
 .terminal-nav-bar {
   background-color: var(--bg-app);
   border-bottom: 1px solid var(--border-subtle);
   padding: 0.65rem 1.25rem;
+  position: sticky;
+  top: 61px;
+  z-index: 999;
+  backdrop-filter: blur(12px);
 }
 
 .nav-pills-container {
@@ -244,9 +258,10 @@ body {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  text-decoration: none;
 }
 
 .nav-pill-btn:hover {
@@ -278,7 +293,7 @@ body {
   padding: 0 1.25rem;
 }
 
-/* --- Notification Banner Card (Matching Screenshot) --- */
+/* --- Notification Banner Card --- */
 .terminal-hero-banner {
   background: linear-gradient(90deg, #131d36 0%, #172138 100%);
   border: 1px solid #233357;
@@ -318,7 +333,7 @@ body {
   line-height: 1.4;
 }
 
-/* --- 2-Column Grid Layout (Matching Screenshot) --- */
+/* --- 2-Column Grid Layout --- */
 .terminal-grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -379,7 +394,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-/* --- Parameter Sliders (Matching Screenshot) --- */
+/* --- Parameter Sliders --- */
 .slider-control-group {
   margin-bottom: 1.6rem;
 }
@@ -408,7 +423,6 @@ body {
 .val-cyan { color: var(--color-cyan); }
 .val-blue { color: var(--color-primary); }
 
-/* Custom Range Input */
 .terminal-range-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -436,7 +450,6 @@ body {
   transform: scale(1.2);
 }
 
-/* Preset Buttons Row */
 .preset-pills-row {
   display: flex;
   gap: 0.4rem;
@@ -478,7 +491,6 @@ body {
   color: #fb7185;
 }
 
-/* Input Fields Row */
 .inputs-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -526,7 +538,6 @@ body {
   cursor: pointer;
 }
 
-/* Primary Action Button (Matching Screenshot) */
 .card-action-footer {
   display: flex;
   justify-content: flex-end;
@@ -544,33 +555,22 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  display: inline-block;
+  text-align: center;
 }
 
 .terminal-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+  color: #ffffff;
 }
 
-/* --- Comprehensive Chapter Reader View --- */
-.content-reader-panel {
-  display: none;
-  animation: fadeIn 0.25s ease-out forwards;
-}
-
-.content-reader-panel.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/* --- Article & Chapter Pages --- */
 .chapter-article-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 2.25rem;
+  padding: 2.5rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-card);
 }
@@ -600,7 +600,7 @@ body {
 }
 
 .chapter-title {
-  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.02em;
@@ -608,7 +608,7 @@ body {
 }
 
 .chapter-quote {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   color: var(--text-muted);
   font-style: italic;
   border-left: 3px solid var(--color-primary);
@@ -621,7 +621,7 @@ body {
   font-size: 1.35rem;
   font-weight: 800;
   color: #ffffff;
-  margin: 1.75rem 0 0.85rem 0;
+  margin: 2rem 0 0.85rem 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -631,11 +631,11 @@ body {
   font-size: 1.15rem;
   font-weight: 750;
   color: #e2e8f0;
-  margin: 1.4rem 0 0.6rem 0;
+  margin: 1.5rem 0 0.6rem 0;
 }
 
 .chapter-content p {
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   color: #cbd5e1;
   margin-bottom: 1rem;
   line-height: 1.7;
@@ -643,7 +643,7 @@ body {
 
 .chapter-content ul, .chapter-content ol {
   margin: 0.75rem 0 1.25rem 1.5rem;
-  font-size: 0.93rem;
+  font-size: 0.94rem;
   color: #cbd5e1;
 }
 
@@ -708,42 +708,181 @@ body {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* Image Visual Cards */
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0;
+/* --- Detailed Recipe Cards (Indian Household Specific) --- */
+.recipe-card-box {
+  background: #0f1628;
+  border: 1px solid #202d4a;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.media-item-card {
-  background: #0e1526;
-  border: 1px solid var(--border-card);
-  border-radius: 12px;
-  overflow: hidden;
+.recipe-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
 }
 
-.media-item-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.media-item-body {
-  padding: 1rem;
-}
-
-.media-item-body h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
+.recipe-title-group h3 {
+  font-size: 1.3rem;
   color: #ffffff;
-  margin-bottom: 0.3rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
 }
 
-.media-item-body p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 0;
+.recipe-meta-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: #17233d;
+  color: #94a3b8;
+}
+
+/* Nutrient Tally Ribbon */
+.nutrient-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  background: #080c16;
+  padding: 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nutrient-stat-cell {
+  text-align: center;
+}
+
+.nutrient-stat-cell .n-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.nutrient-stat-cell .n-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.n-val.protein { color: var(--color-coral-red); }
+.n-val.carbs { color: var(--color-cyan); }
+.n-val.fats { color: var(--color-amber); }
+.n-val.fiber { color: var(--color-live-green); }
+
+.recipe-sections-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .recipe-sections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ingredients-panel {
+  background: #0a0f1c;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 1.1rem;
+}
+
+.ingredients-panel h4, .steps-panel h4 {
+  font-size: 0.92rem;
+  font-weight: 750;
+  color: #60a5fa;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ingredients-list {
+  list-style: none;
+  font-size: 0.86rem;
+  color: #cbd5e1;
+}
+
+.ingredients-list li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-instruction-item {
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.step-number-bullet {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+}
+
+/* Pager / Prev-Next Navigation */
+.chapter-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pager-btn {
+  background: #0f1628;
+  border: 1px solid var(--border-card);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-btn);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pager-btn:hover {
+  background: #17233e;
+  border-color: var(--color-primary);
+  color: #60a5fa;
 }
 
 /* Mobile Bottom Navigation Bar */
@@ -779,6 +918,7 @@ body {
   font-size: 0.68rem;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mobile-nav-btn.active {
