@@ -1,11 +1,10 @@
 /* ==========================================================================
    RECOMP TERMINAL OS - JAVASCRIPT CONTROLLER
-   High-Tech Terminal Interactions, Real-Time Sliders, Chapter Routing
+   High-Tech Terminal Interactions, Mode Switching, Chapter Routing & Timer
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigationTabs();
-  initParameterSliders();
   initModeToggle();
   initScorecardCalculator();
   initFloatingRestTimer();
@@ -31,169 +30,29 @@ function initNavigationTabs() {
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const tab = btn.getAttribute('data-tab');
-      if (tab) switchTab(tab);
+      if (tab && panels.length > 0) switchTab(tab);
     });
   });
 }
 
-// --- 2. Interactive Parameter Tuning Sliders (Screenshot Style) ---
-function initParameterSliders() {
-  const deficitSlider = document.getElementById('deficitSlider');
-  const deficitVal = document.getElementById('deficitVal');
-  const deficitChips = document.querySelectorAll('.preset-deficit');
-
-  const proteinSlider = document.getElementById('proteinSlider');
-  const proteinVal = document.getElementById('proteinVal');
-  const proteinChips = document.querySelectorAll('.preset-protein');
-
-  const stepsSlider = document.getElementById('stepsSlider');
-  const stepsVal = document.getElementById('stepsVal');
-  const stepsChips = document.querySelectorAll('.preset-steps');
-
-  const weightInput = document.getElementById('inputWeight');
-  const heightInput = document.getElementById('inputHeight');
-  const saveBtn = document.getElementById('saveParamsBtn');
-
-  // Deficit Slider
-  if (deficitSlider && deficitVal) {
-    deficitSlider.addEventListener('input', () => {
-      deficitVal.textContent = `${deficitSlider.value}%`;
-      updateChips(deficitChips, deficitSlider.value);
-      recalculateParameters();
-    });
-  }
-
-  deficitChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const val = chip.getAttribute('data-val');
-      if (deficitSlider) {
-        deficitSlider.value = val;
-        deficitVal.textContent = `${val}%`;
-        updateChips(deficitChips, val);
-        recalculateParameters();
-      }
-    });
-  });
-
-  // Protein Slider
-  if (proteinSlider && proteinVal) {
-    proteinSlider.addEventListener('input', () => {
-      proteinVal.textContent = `${(proteinSlider.value / 10).toFixed(1)} g/kg`;
-      updateChips(proteinChips, proteinSlider.value);
-      recalculateParameters();
-    });
-  }
-
-  proteinChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const val = chip.getAttribute('data-val');
-      if (proteinSlider) {
-        proteinSlider.value = val;
-        proteinVal.textContent = `${(val / 10).toFixed(1)} g/kg`;
-        updateChips(proteinChips, val);
-        recalculateParameters();
-      }
-    });
-  });
-
-  // Steps Slider
-  if (stepsSlider && stepsVal) {
-    stepsSlider.addEventListener('input', () => {
-      stepsVal.textContent = `${parseInt(stepsSlider.value).toLocaleString()}`;
-      updateChips(stepsChips, stepsSlider.value);
-    });
-  }
-
-  stepsChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const val = chip.getAttribute('data-val');
-      if (stepsSlider) {
-        stepsSlider.value = val;
-        stepsVal.textContent = `${parseInt(val).toLocaleString()}`;
-        updateChips(stepsChips, val);
-      }
-    });
-  });
-
-  if (weightInput) weightInput.addEventListener('input', recalculateParameters);
-  if (heightInput) heightInput.addEventListener('input', recalculateParameters);
-
-  if (saveBtn) {
-    saveBtn.addEventListener('click', () => {
-      saveBtn.textContent = '✓ Parameters Applied!';
-      saveBtn.style.background = '#10b981';
-      setTimeout(() => {
-        saveBtn.textContent = 'Save & Apply Recomp Parameters';
-        saveBtn.style.background = '';
-      }, 2000);
-    });
-  }
-}
-
-function updateChips(chips, activeVal) {
-  chips.forEach(c => {
-    c.classList.toggle('active', c.getAttribute('data-val') === String(activeVal));
-  });
-}
-
-function recalculateParameters() {
-  const weight = parseFloat(document.getElementById('inputWeight')?.value) || 85;
-  const height = parseFloat(document.getElementById('inputHeight')?.value) || 184;
-  const deficitPct = parseFloat(document.getElementById('deficitSlider')?.value) || 13;
-  const proteinPerKg = (parseFloat(document.getElementById('proteinSlider')?.value) || 21) / 10;
-
-  // BMR & TDEE
-  const bmr = (10 * weight) + (6.25 * height) - (5 * 30) + 5;
-  const tdee = Math.round(bmr * 1.375);
-
-  const deficitCalories = Math.round(tdee * (deficitPct / 100));
-  const targetCalories = tdee - deficitCalories;
-
-  const targetProteinGrams = Math.round(weight * proteinPerKg);
-  const targetFatGrams = Math.round(weight * 0.8);
-  const carbCalories = targetCalories - (targetProteinGrams * 4) - (targetFatGrams * 9);
-  const targetCarbGrams = Math.max(Math.round(carbCalories / 4), 100);
-
-  // Update displays if elements exist
-  const liveCal = document.getElementById('liveTargetCal');
-  const liveProt = document.getElementById('liveTargetProt');
-  const liveCarbs = document.getElementById('liveTargetCarbs');
-  const liveFats = document.getElementById('liveTargetFats');
-
-  if (liveCal) liveCal.textContent = `${targetCalories} kcal`;
-  if (liveProt) liveProt.textContent = `${targetProteinGrams}g`;
-  if (liveCarbs) liveCarbs.textContent = `${targetCarbGrams}g`;
-  if (liveFats) liveFats.textContent = `${targetFatGrams}g`;
-}
-
-// --- 3. Mode Toggle (TRAIN vs REST) ---
+// --- 2. Mode Toggle (TRAIN vs REST) ---
 function initModeToggle() {
   const modeBtns = document.querySelectorAll('.mode-option-btn');
   modeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       modeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const mode = btn.getAttribute('data-mode');
-      
-      const calDisplay = document.getElementById('liveTargetCal');
-      const carbDisplay = document.getElementById('liveTargetCarbs');
-      
-      if (mode === 'REST') {
-        if (calDisplay) calDisplay.textContent = '1,950 kcal';
-        if (carbDisplay) carbDisplay.textContent = '150g';
-      } else {
-        if (calDisplay) calDisplay.textContent = '2,250 kcal';
-        if (carbDisplay) carbDisplay.textContent = '220g';
-      }
     });
   });
 }
 
-// --- 4. Interactive 100-Point Scorecard ---
+// --- 3. Interactive 100-Point Scorecard ---
 function initScorecardCalculator() {
   const checkboxes = document.querySelectorAll('.scorecard-cb');
   const scoreTotalEl = document.getElementById('scorecardTotal');
   const gradeBadgeEl = document.getElementById('scorecardGradeBadge');
+
+  if (!checkboxes.length) return;
 
   function updateScore() {
     let total = 0;
@@ -226,7 +85,7 @@ function initScorecardCalculator() {
   updateScore();
 }
 
-// --- 5. Floating Rest Timer ---
+// --- 4. Floating Rest Timer ---
 let timerCount = 90;
 let timerRunning = false;
 let timerId = null;
