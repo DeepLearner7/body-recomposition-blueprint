@@ -1,34 +1,40 @@
 site_name: Body Recomposition Blueprint
 site_description: A scientific, personalized manual for body recomposition, muscle hypertrophy, and sustainable fat loss.
 site_author: Blueprint Fitness
-site_url: https://body-recomposition-blueprint.local
 
 theme:
   name: material
   language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
-    # Light mode
+    # Light mode (Clean, warm minimalist aesthetic)
     - scheme: default
-      primary: indigo
+      primary: slate
       accent: deep orange
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Switch to dark mode
-    # Dark mode
+    # Dark mode (Refined deep obsidian / slate)
     - scheme: slate
-      primary: indigo
+      primary: slate
       accent: deep orange
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
     - navigation.top
+    - header.autohide
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
 
 plugins:
