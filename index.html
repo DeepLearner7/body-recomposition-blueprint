@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="description" content="Personalized Body Recomposition Blueprint for 184cm, 85kg novice lifters. Build muscle and burn fat with science-backed nutrition and training.">
+  <title>Body Recomposition Blueprint | 85 kg • 184 cm</title>
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom Bubble & Material Design Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Frosted Navigation -->
+  <header class="top-header">
+    <div class="header-container">
+      <div class="logo-group">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-info">
+          <h1>RECOMP BLUEPRINT</h1>
+          <span class="brand-badge">85 KG • 184 CM • NOVICE</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+
+    <!-- Hero Visual Banner -->
+    <section class="hero-card">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+           alt="Athlete training in modern gym" 
+           class="hero-image-bg">
+      <div class="hero-content">
+        <div class="hero-pill">🔥 Prime Recomp Opportunity</div>
+        <h2 class="hero-title">Build Contractile Muscle.<br>Burn Midsection Fat.</h2>
+        <p class="hero-subtitle">
+          At 184 cm and 85 kg, your untrained muscle fibers possess maximum hypertrophic sensitivity. 
+          Use your adipose reserves to fuel new muscle growth with high protein and progressive overload.
+        </p>
+        <div class="hero-stats-row">
+          <div class="hero-stat-pill">🎯 <strong>Target:</strong> Simultaneous Recomp</div>
+          <div class="hero-stat-pill">🥩 <strong>Protein:</strong> 180g / day (Constant)</div>
+          <div class="hero-stat-pill">🏋️ <strong>Split:</strong> 4-Day Upper / Lower</div>
+          <div class="hero-stat-pill">🚶 <strong>NEAT:</strong> 10,000 Steps</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calorie Cycling Mode Switcher -->
+    <section class="mode-switcher-container">
+      <div class="bubble-segmented-control" role="group" aria-label="Select Daily Protocol">
+        <button class="mode-btn active" id="modeTrainBtn">
+          <span>🔥</span> Training Day (2,250 kcal)
+        </button>
+        <button class="mode-btn" id="modeRestBtn">
+          <span>💤</span> Rest Day (1,950 kcal)
+        </button>
+      </div>
+    </section>
+
+    <!-- Interactive Colorful Metric Cards Grid -->
+    <section class="cards-grid">
+      <!-- Calories Card -->
+      <div class="bubble-card">
+        <div class="card-top">
+          <div class="card-icon-bubble icon-calories">🔥</div>
+          <span class="card-badge pill-protein" id="badgeCalories">HYPERTROPHY FUEL</span>
+        </div>
+        <div class="card-label">Daily Calories</div>
+        <div class="card-value-display" id="valCalories">2250</div>
+        <div class="card-footer-desc">Mild -300 kcal energy deficit below TDEE</div>
+        <div class="bubble-progress-bar">
+          <div class="progress-fill fill-calories" id="barCalories" style="width: 88%;"></div>
+        </div>
+      </div>
+
+      <!-- Protein Card -->
+      <div class="bubble-card">
+        <div class="card-top">
+          <div class="card-icon-bubble icon-protein">🥩</div>
+          <span class="card-badge pill-protein">NON-NEGOTIABLE</span>
+        </div>
+        <div class="card-label">Daily Protein</div>
+        <div class="card-value-display" id="valProtein">180g</div>
+        <div class="card-footer-desc">~2.1 g/kg | 4 x 45g Leucine Pulses</div>
+        <div class="bubble-progress-bar">
+          <div class="progress-fill fill-protein" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Carbs Card -->
+      <div class="bubble-card">
+        <div class="card-top">
+          <div class="card-icon-bubble icon-carbs">🍚</div>
+          <span class="card-badge pill-carbs">PERFORMANCE</span>
+        </div>
+        <div class="card-label">Carbohydrates</div>
+        <div class="card-value-display" id="valCarbs">220g</div>
+        <div class="card-footer-desc">Concentrated pre- & post-workout</div>
+        <div class="bubble-progress-bar">
+          <div class="progress-fill fill-carbs" id="barCarbs" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <!-- Fats Card -->
+      <div class="bubble-card">
+        <div class="card-top">
+          <div class="card-icon-bubble icon-fats">🥑</div>
+          <span class="card-badge pill-fats">HORMONES</span>
+        </div>
+        <div class="card-label">Healthy Fats</div>
+        <div class="card-value-display" id="valFats">70g</div>
+        <div class="card-footer-desc">Testosterone & joint health floor</div>
+        <div class="bubble-progress-bar">
+          <div class="progress-fill fill-fats" id="barFats" style="width: 28%;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop Navigation Tabs -->
+    <nav class="tab-navigation-bar" aria-label="Main Sections">
+      <button class="tab-bubble-btn active" data-tab="dashboard">📊 Command Center</button>
+      <button class="tab-bubble-btn" data-tab="nutrition">🥗 Meal Plan & Food</button>
+      <button class="tab-bubble-btn" data-tab="workouts">🏋️ 4-Day Workout Split</button>
+      <button class="tab-bubble-btn" data-tab="recovery">🌙 Sleep & Supplements</button>
+      <button class="tab-bubble-btn" data-tab="scorecard">📋 100-Pt Audit Scorecard</button>
+    </nav>
+
+    <!-- ===================================================================
+         TAB 1: COMMAND CENTER (DASHBOARD)
+         =================================================================== -->
+    <div class="tab-content-panel active" id="tab-dashboard">
+      
+      <!-- 5-Point Daily Checklist -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>⚡ Daily 5-Point Recomp Checklist</span>
+          <span class="badge badge-accent">Daily Non-Negotiables</span>
+        </h3>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" checked>
+          <span class="checkbox-label-text">1. Hit 175g–185g Protein across 4 meals (Leucine trigger reached)</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" checked>
+          <span class="checkbox-label-text">2. Stay within ±75 kcal of daily target (2,250 on Training / 1,950 on Rest)</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox">
+          <span class="checkbox-label-text">3. Complete 8,000 to 10,000 Daily Steps (Zone 1/2 NEAT)</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox">
+          <span class="checkbox-label-text">4. Drink 3.5 to 4.0 Litres of plain water (+ pink salt pre-workout)</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox">
+          <span class="checkbox-label-text">5. Sleep 7.5 to 8.5 Hours in cool, pitch-dark room (HGH & Test recovery)</span>
+        </label>
+      </div>
+
+      <!-- The 3-Metric Rule Progress Tracker -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>📈 The 3-Metric True Progress Rule</span>
+          <span class="badge badge-success">Avoid the Scale Trap</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+          At 85 kg, gaining 1.5 kg of contractile muscle while shedding 1.5 kg of fat keeps the scale at 85.0 kg! 
+          Evaluate true progress using these three biological markers:
+        </p>
+
+        <div class="cards-grid" style="margin-bottom: 0;">
+          <div class="bubble-card" style="padding: 1rem;">
+            <div class="card-label">1. Navel Circumference</div>
+            <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-protein);">-0.5 to -1.0 cm / month</div>
+            <div class="card-footer-desc">Direct confirmation of visceral fat loss.</div>
+          </div>
+
+          <div class="bubble-card" style="padding: 1rem;">
+            <div class="card-label">2. Gym Logbook Lifts</div>
+            <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-primary);">+2.5 kg or +1 Rep</div>
+            <div class="card-footer-desc">Direct confirmation of muscle fiber hypertrophy.</div>
+          </div>
+
+          <div class="bubble-card" style="padding: 1rem;">
+            <div class="card-label">3. 7-Day Moving Avg</div>
+            <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-carbs);">Flat or -0.3 kg/wk</div>
+            <div class="card-footer-desc">Smooths daily water/glycogen spikes.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================================
+         TAB 2: NUTRITION & MEAL ARCHITECTURE
+         =================================================================== -->
+    <div class="tab-content-panel" id="tab-nutrition">
+      
+      <div id="restPlanNotice" style="display: none; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 16px; padding: 1rem; margin-bottom: 1.5rem;">
+        <strong style="color: var(--color-success);">🌿 Rest Day Protocol Active (1,950 kcal):</strong> 
+        Carbs reduced to 150g (drop oats to 35g, cooked rice to 120g). Protein remains 180g constant!
+      </div>
+
+      <!-- 4-Meal Rich Cards -->
+      <div class="meals-container">
+        
+        <!-- Meal 1: Breakfast -->
+        <article class="meal-rich-card">
+          <div class="meal-img-box">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop" alt="Scrambled eggs and oats">
+            <span class="meal-time-pill">08:00 AM • MEAL 1</span>
+            <span class="meal-protein-tag">38g Protein</span>
+          </div>
+          <div class="meal-body">
+            <h3 class="meal-title">Executive Power Scramble & Oats</h3>
+            <div class="meal-macros-row">
+              <span class="macro-mini-pill pill-protein">38g P</span>
+              <span class="macro-mini-pill pill-carbs">50g C</span>
+              <span class="macro-mini-pill pill-fats">22g F</span>
+              <span class="macro-mini-pill" style="background: var(--bg-bubble);">530 kcal</span>
+            </div>
+            <ul class="meal-items-list">
+              <li>3 Whole Eggs + 2 Egg Whites scrambled in 5g butter</li>
+              <li>60g Rolled Oats with 100g Blueberries & cinnamon</li>
+              <li>15g Raw Almonds or Walnuts</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Meal 2: Lunch -->
+        <article class="meal-rich-card">
+          <div class="meal-img-box">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" alt="Grilled chicken and rice meal prep">
+            <span class="meal-time-pill">01:00 PM • MEAL 2</span>
+            <span class="meal-protein-tag">46g Protein</span>
+          </div>
+          <div class="meal-body">
+            <h3 class="meal-title">High-Performance Work Lunch</h3>
+            <div class="meal-macros-row">
+              <span class="macro-mini-pill pill-protein">46g P</span>
+              <span class="macro-mini-pill pill-carbs">55g C</span>
+              <span class="macro-mini-pill pill-fats">18g F</span>
+              <span class="macro-mini-pill" style="background: var(--bg-bubble);">580 kcal</span>
+            </div>
+            <ul class="meal-items-list">
+              <li>180g Grilled Lemon Garlic Chicken Breast</li>
+              <li>180g Steamed Basmati or Jasmine Rice</li>
+              <li>150g Steamed Broccoli or Green Beans + 10g Olive Oil</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Meal 3: Anabolic Shake -->
+        <article class="meal-rich-card">
+          <div class="meal-img-box">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop" alt="Protein whey smoothie">
+            <span class="meal-time-pill">05:30 PM • PRE-GYM</span>
+            <span class="meal-protein-tag">41g Protein</span>
+          </div>
+          <div class="meal-body">
+            <h3 class="meal-title">Peri-Workout Anabolic Shake</h3>
+            <div class="meal-macros-row">
+              <span class="macro-mini-pill pill-protein">41g P</span>
+              <span class="macro-mini-pill pill-carbs">42g C</span>
+              <span class="macro-mini-pill pill-fats">3g F</span>
+              <span class="macro-mini-pill" style="background: var(--bg-bubble);">360 kcal</span>
+            </div>
+            <ul class="meal-items-list">
+              <li>1.25 Scoops (38g) Whey Protein Isolate (30g protein)</li>
+              <li>250ml Skim Milk or Soy Milk (9g protein)</li>
+              <li>1 Medium Ripe Banana (rapid glycogen delivery)</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Meal 4: Dinner -->
+        <article class="meal-rich-card">
+          <div class="meal-img-box">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=800&auto=format&fit=crop" alt="Pan seared salmon with vegetables">
+            <span class="meal-time-pill">08:30 PM • MEAL 4</span>
+            <span class="meal-protein-tag">45g Protein</span>
+          </div>
+          <div class="meal-body">
+            <h3 class="meal-title">Nightly Recovery Dinner</h3>
+            <div class="meal-macros-row">
+              <span class="macro-mini-pill pill-protein">45g P</span>
+              <span class="macro-mini-pill pill-carbs">52g C</span>
+              <span class="macro-mini-pill pill-fats">19g F</span>
+              <span class="macro-mini-pill" style="background: var(--bg-bubble);">570 kcal</span>
+            </div>
+            <ul class="meal-items-list">
+              <li>180g Pan-Seared Salmon Fillet or Chicken Breast</li>
+              <li>200g Roasted Sweet Potatoes or 2 Whole Wheat Rotis</li>
+              <li>Large Cucumber & Tomato Garden Salad with Olive Oil</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Quick Office & Grocery Reference -->
+      <div class="cards-grid">
+        <div class="bubble-card">
+          <div class="card-label">💼 Office Desk Survival Kit</div>
+          <ul class="meal-items-list" style="margin-top: 0.75rem;">
+            <li>1 Scoop Whey Isolate in shaker (instant 30g protein)</li>
+            <li>30g Pre-portioned Raw Almonds pack</li>
+            <li>1-Litre Insulated Stainless Steel Bottle (finish 2 bottles at desk)</li>
+            <li>2:00 PM Hard Caffeine Cutoff to protect sleep hormones</li>
+          </ul>
+        </div>
+
+        <div class="bubble-card">
+          <div class="card-label">⏱️ 90-Min Sunday Meal Prep</div>
+          <ul class="meal-items-list" style="margin-top: 0.75rem;">
+            <li>Bake 1.2 kg Chicken Breasts on sheet-pan at 200°C for 20 mins</li>
+            <li>Cook 350g raw rice in cooker (yields ~1 kg cooked rice)</li>
+            <li>Steam 600g broccoli for 4 mins (stays crunchy)</li>
+            <li>Assemble into 4 glass containers for Mon–Thu lunches</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================================
+         TAB 3: 4-DAY WORKOUT SPLIT & REST TIMER
+         =================================================================== -->
+    <div class="tab-content-panel" id="tab-workouts">
+      
+      <!-- Day Switcher Chips -->
+      <div class="workout-split-selector">
+        <button class="day-chip active" data-day="upperA">🔴 Monday: Upper Body A</button>
+        <button class="day-chip" data-day="lowerA">🔵 Tuesday: Lower Body A</button>
+        <button class="day-chip" data-day="upperB">🔴 Thursday: Upper Body B</button>
+        <button class="day-chip" data-day="lowerB">🔵 Friday: Lower Body B</button>
+      </div>
+
+      <!-- Dynamic Exercise Cards Container -->
+      <div id="exerciseListContainer">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+      <!-- Progressive Overload Rule Box -->
+      <div class="bubble-card" style="margin-top: 1.5rem;">
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">
+          ⚙️ The Double Progression Rule (1–2 RIR)
+        </h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          Pick a weight you can lift for 3 sets of 8 reps. Keep the weight identical each week until you can execute 
+          <strong>3 sets of 12 reps</strong> with pristine form. Then, add <strong>+2.5 kg</strong> to the barbell or grab the next dumbbell. 
+          Never train to sloppy failure; stop each set with 1–2 reps in reserve.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ===================================================================
+         TAB 4: RECOVERY & SUPPLEMENTS
+         =================================================================== -->
+    <div class="tab-content-panel" id="tab-recovery">
+      
+      <!-- Sleep Hero Card -->
+      <div class="bubble-card" style="margin-bottom: 1.5rem;">
+        <div class="card-label">🌙 Sleep & Growth Hormone Architecture</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin: 0.5rem 0;">7.5 to 8.5 Hours of Sleep Rebuilds Your Body</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Up to <strong>70% of daily Human Growth Hormone (HGH)</strong> is released during Stage 3 Slow-Wave Deep Sleep. 
+          Sleeping 5 hours drops circulating testosterone by 15% and spikes the hunger hormone ghrelin.
+        </p>
+
+        <div class="cards-grid" style="margin-bottom: 0;">
+          <div class="bubble-card" style="padding: 1rem; background: var(--bg-bubble);">
+            <strong style="color: var(--color-primary);">1. Morning Sun Anchor</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">10 mins natural sunlight upon waking sets your circadian melatonin timer.</p>
+          </div>
+          <div class="bubble-card" style="padding: 1rem; background: var(--bg-bubble);">
+            <strong style="color: var(--color-protein);">2. Cool Bedroom</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">18°C – 20°C (65°F – 68°F) enables rapid core temperature drop for deep sleep.</p>
+          </div>
+          <div class="bubble-card" style="padding: 1rem; background: var(--bg-bubble);">
+            <strong style="color: var(--color-success);">3. 60-Min Digital Sunset</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">Zero phone screens or blue blockers 1 hour before bed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supplements Grid -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem;">💊 Evidence-Based Tier 1 Supplements</h3>
+      
+      <div class="cards-grid">
+        <div class="bubble-card">
+          <span class="badge badge-accent">ERGOGENIC</span>
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0.5rem 0;">Creatine Monohydrate</h4>
+          <div style="font-size: 0.85rem; color: var(--color-protein); font-weight: 700; margin-bottom: 0.5rem;">5 Grams / Day (Every day)</div>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">
+            Replenishes intracellular ATP-PC stores for explosive strength. Draws water inside muscle cells (intracellular swelling drives protein synthesis).
+          </p>
+        </div>
+
+        <div class="bubble-card">
+          <span class="badge badge-primary">COMPLETE PROTEIN</span>
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0.5rem 0;">Whey Protein Isolate</h4>
+          <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem;">1 to 1.25 Scoops (30g–38g)</div>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">
+            Highest biological value and ~11% leucine content. Fast digestion post-workout or convenient office desk shake.
+          </p>
+        </div>
+
+        <div class="bubble-card">
+          <span class="badge badge-success">ENDOCRINE HEALTH</span>
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0.5rem 0;">Vitamin D3 + K2</h4>
+          <div style="font-size: 0.85rem; color: var(--color-success); font-weight: 700; margin-bottom: 0.5rem;">4,000–5,000 IU D3 + 100mcg K2</div>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">
+            Supports testosterone synthesis and skeletal muscle contractility. Take with breakfast fats for optimal absorption.
+          </p>
+        </div>
+
+        <div class="bubble-card">
+          <span class="badge badge-accent">CELLULAR RECOVERY</span>
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0.5rem 0;">Magnesium Bisglycinate</h4>
+          <div style="font-size: 0.85rem; color: var(--color-fats); font-weight: 700; margin-bottom: 0.5rem;">300–400mg (45 mins before bed)</div>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">
+            GABA receptor agonist that relaxes the central nervous system and accelerates neuromuscular recovery during sleep.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================================
+         TAB 5: INTERACTIVE 100-POINT AUDIT SCORECARD
+         =================================================================== -->
+    <div class="tab-content-panel" id="tab-scorecard">
+      
+      <!-- Real-Time Score Display Box -->
+      <div class="score-tally-box">
+        <div class="score-grade-pill" id="scoreGrade">🏆 Calculating Weekly Grade...</div>
+        <div class="score-number" id="scoreTally">0</div>
+        <div style="font-size: 1rem; opacity: 0.9; font-weight: 600;">Out of 100 Weekly Execution Points</div>
+      </div>
+
+      <!-- Section 1: Nutrition -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>🥩 1. Nutrition & Protein Discipline</span>
+          <span class="point-val-tag">35 Points Max</span>
+        </h3>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="21" checked>
+          <span class="checkbox-label-text">180g Protein Target Hit 7/7 Days (3 pts/day)</span>
+          <span class="point-val-tag">+21 pts</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="14" checked>
+          <span class="checkbox-label-text">Calorie Targets Followed within ±75 kcal (2,250 on training / 1,950 on rest)</span>
+          <span class="point-val-tag">+14 pts</span>
+        </label>
+      </div>
+
+      <!-- Section 2: Workouts -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>🏋️ 2. Training & Progressive Overload</span>
+          <span class="point-val-tag">30 Points Max</span>
+        </h3>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="20" checked>
+          <span class="checkbox-label-text">Completed All 4 Gym Sessions (Upper A, Lower A, Upper B, Lower B)</span>
+          <span class="point-val-tag">+20 pts</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="5" checked>
+          <span class="checkbox-label-text">Logged Every Weight & Rep in Journal / App</span>
+          <span class="point-val-tag">+5 pts</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="5" checked>
+          <span class="checkbox-label-text">Maintained 1–2 RIR with Pristine Form (No sloppy ego lifting)</span>
+          <span class="point-val-tag">+5 pts</span>
+        </label>
+      </div>
+
+      <!-- Section 3: NEAT & Hydration -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>🚶 3. Daily Steps & Hydration</span>
+          <span class="point-val-tag">15 Points Max</span>
+        </h3>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="10" checked>
+          <span class="checkbox-label-text">Reached 8,000 to 10,000 Steps on At Least 6 Days</span>
+          <span class="point-val-tag">+10 pts</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="5" checked>
+          <span class="checkbox-label-text">Consumed 3.5 to 4.0 Litres of Water Daily</span>
+          <span class="point-val-tag">+5 pts</span>
+        </label>
+      </div>
+
+      <!-- Section 4: Recovery -->
+      <div class="checklist-group">
+        <h3 class="checklist-title">
+          <span>🌙 4. Sleep & Supplements</span>
+          <span class="point-val-tag">20 Points Max</span>
+        </h3>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="14" checked>
+          <span class="checkbox-label-text">Averaged 7.5 to 8.5 Hours of Sleep Across the Week</span>
+          <span class="point-val-tag">+14 pts</span>
+        </label>
+
+        <label class="custom-checkbox-item">
+          <input type="checkbox" class="score-checkbox" data-points="6" checked>
+          <span class="checkbox-label-text">Took 5g Creatine, D3+K2, Omega-3, and Magnesium Daily</span>
+          <span class="point-val-tag">+6 pts</span>
+        </label>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Floating Gym Rest Timer Pill -->
+  <aside class="floating-rest-timer" aria-label="Gym Rest Timer">
+    <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Rest:</div>
+    <div class="timer-display" id="timerDisplay">1:30</div>
+    <button class="timer-start-btn" id="timerToggleBtn" title="Start/Pause Timer">▶</button>
+    <button class="day-chip timer-preset-btn" data-sec="60" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">60s</button>
+    <button class="day-chip timer-preset-btn active" data-sec="90" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">90s</button>
+    <button class="day-chip timer-preset-btn" data-sec="120" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">120s</button>
+  </aside>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <button class="nav-bottom-item active" data-tab="dashboard">
+      <span class="icon">📊</span>
+      <span>Dashboard</span>
+    </button>
+    <button class="nav-bottom-item" data-tab="nutrition">
+      <span class="icon">🥗</span>
+      <span>Meals</span>
+    </button>
+    <button class="nav-bottom-item" data-tab="workouts">
+      <span class="icon">🏋️</span>
+      <span>Workouts</span>
+    </button>
+    <button class="nav-bottom-item" data-tab="recovery">
+      <span class="icon">🌙</span>
+      <span>Recovery</span>
+    </button>
+    <button class="nav-bottom-item" data-tab="scorecard">
+      <span class="icon">📋</span>
+      <span>Scorecard</span>
+    </button>
+  </nav>
+
+  <!-- Interactive Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
