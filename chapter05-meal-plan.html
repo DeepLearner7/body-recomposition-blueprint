@@ -4,11 +4,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#080c14">
-  <title>Chapter 05: 4-Meal Indian Daily Blueprint | BODY RECOMP OS</title>
+  <title>Chapter 05: 7-Day Indian Recomposition Meal Plan | BODY RECOMP OS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .day-plan-card {
+      background: #0d1424;
+      border: 1px solid #1e2c4a;
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .day-plan-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+    .day-title-wrap h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+    .day-title-wrap .subtext {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .day-macro-badge {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .day-badge-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: #17233d;
+      color: #94a3b8;
+    }
+    .day-badge-pill.train {
+      background: rgba(96, 165, 250, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+    }
+    .day-badge-pill.rest {
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+    .meal-block-item {
+      background: #090e1a;
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1rem;
+    }
+    .meal-block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+    .meal-name-link {
+      font-size: 1rem;
+      font-weight: 750;
+      color: #60a5fa;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .meal-name-link:hover {
+      text-decoration: underline;
+      color: #93c5fd;
+    }
+    .meal-macros-inline {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+    .meal-macros-inline .p-val { color: var(--color-coral-red); }
+    .meal-macros-inline .c-val { color: var(--color-cyan); }
+    .meal-macros-inline .f-val { color: var(--color-amber); }
+    .meal-desc-list {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .meal-recipe-cta {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-decoration: none;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .meal-recipe-cta:hover {
+      background: rgba(56, 189, 248, 0.18);
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
@@ -57,133 +172,617 @@
   <main class="main-terminal-container">
     <article class="chapter-article-card">
       <div class="chapter-header">
-        <span class="chapter-badge">CHAPTER 05 • NUTRITION BLUEPRINT</span>
-        <h1 class="chapter-title">The 4-Meal Indian Daily Blueprint</h1>
+        <span class="chapter-badge">CHAPTER 05 • 7-DAY MEAL BLUEPRINT</span>
+        <h1 class="chapter-title">The Complete 7-Day Indian Recomposition Meal Plan</h1>
         <div class="chapter-quote">
-          "A diet you cannot follow consistently for 6 months is useless. 
-          This daily structure integrates traditional Indian kitchen ingredients to hit 180g protein without dry boiled food."
+          "A diet is only as good as your ability to stick to it. 
+          Here is your full Monday-to-Sunday roadmap hitting exactly 180g protein every day with calorie cycling. 
+          Every single meal links directly to an easy step-by-step recipe in Chapter 6."
         </div>
       </div>
 
       <div class="chapter-content">
-        
-        <h3>⚡ Training Day Indian Schedule (~2,250 kcal | 180g P | 220g C | 70g F)</h3>
 
-        <!-- Meal 1 -->
-        <div class="recipe-card-box">
-          <div class="recipe-header-flex">
-            <div>
-              <h3 style="color:#60a5fa;">🍳 Meal 1: Breakfast Power Refuel (08:00 AM)</h3>
-              <div style="font-size:0.85rem; color:var(--text-muted);">Hits 42g protein & triggers morning muscle protein synthesis</div>
-            </div>
-            <span class="meta-pill" style="color:#f43f5e; font-weight:800;">42g Protein • 520 kcal</span>
-          </div>
-          <div class="nutrient-bar-grid">
-            <div class="nutrient-stat-cell"><div class="n-label">Calories</div><div class="n-val">520 kcal</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Protein</div><div class="n-val protein">42g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Carbs</div><div class="n-val carbs">46g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Fats</div><div class="n-val fats">18g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Leucine</div><div class="n-val" style="color:#a78bfa;">3.5g</div></div>
-          </div>
-          <p><strong>Plate Components:</strong></p>
-          <ul>
-            <li><strong>Desi Masala Egg Scramble:</strong> 3 Whole Farm Eggs + 3 Large Egg Whites scrambled with onions, green chilies, tomatoes in 1 tsp (5g) desi ghee/butter.</li>
-            <li><strong>Carbohydrate:</strong> 2 Medium Whole Wheat Tawa Phulkas (dry, no extra ghee brushed) OR 60g Rolled Oats cooked with cinnamon and sliced apple.</li>
-            <li><strong>Micronutrients:</strong> 15g Raw Almonds (Badam) + 500ml water with morning Vitamin D3+K2 capsule.</li>
-          </ul>
+        <!-- Calorie Cycling Overview Table -->
+        <div class="terminal-table-wrap">
+          <table class="terminal-table">
+            <thead>
+              <tr>
+                <th>Day Type</th>
+                <th>Days of Week</th>
+                <th>Calories</th>
+                <th>Protein Target</th>
+                <th>Carbohydrates</th>
+                <th>Fats</th>
+                <th>Metabolic Goal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Training Days</strong></td>
+                <td>Mon, Tue, Thu, Fri</td>
+                <td><strong style="color:#60a5fa;">2,250 kcal</strong></td>
+                <td><strong style="color:#f43f5e;">180g</strong></td>
+                <td>220g</td>
+                <td>70g</td>
+                <td>Fuel heavy progressive overload & maximize muscle protein synthesis</td>
+              </tr>
+              <tr>
+                <td><strong>Rest Days</strong></td>
+                <td>Wed, Sat, Sun</td>
+                <td><strong style="color:#34d399;">1,950 kcal</strong></td>
+                <td><strong style="color:#f43f5e;">180g</strong></td>
+                <td>150g</td>
+                <td>65g</td>
+                <td>Lower carbohydrates to accelerate fat oxidation while protecting lean mass</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <!-- Meal 2 -->
-        <div class="recipe-card-box">
-          <div class="recipe-header-flex">
-            <div>
-              <h3 style="color:#60a5fa;">🥗 Meal 2: Executive Office Dabba Lunch (01:00 PM)</h3>
-              <div style="font-size:0.85rem; color:var(--text-muted);">Prepped on Sunday or cooked in 15 minutes in the morning</div>
-            </div>
-            <span class="meta-pill" style="color:#f43f5e; font-weight:800;">48g Protein • 580 kcal</span>
-          </div>
-          <div class="nutrient-bar-grid">
-            <div class="nutrient-stat-cell"><div class="n-label">Calories</div><div class="n-val">580 kcal</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Protein</div><div class="n-val protein">48g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Carbs</div><div class="n-val carbs">56g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Fats</div><div class="n-val fats">16g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Leucine</div><div class="n-val" style="color:#a78bfa;">4.2g</div></div>
-          </div>
-          <p><strong>Plate Components:</strong></p>
-          <ul>
-            <li><strong>Primary Protein:</strong> 200g Tawa Grilled Kasuri Methi Chicken Tikka (OR 50g Soya Chunks + 100g Low-fat Paneer Curry).</li>
-            <li><strong>Clean Carb:</strong> 170g Steamed Basmati or Sona Masoori Jeera Rice.</li>
-            <li><strong>Fiber & Gut Health:</strong> 100g fresh cucumber, tomato, onion kachumber salad + 100g low-fat curd (dahi).</li>
-          </ul>
-        </div>
-
-        <!-- Meal 3 -->
-        <div class="recipe-card-box">
-          <div class="recipe-header-flex">
-            <div>
-              <h3 style="color:#60a5fa;">🥤 Meal 3: Peri-Workout Anabolic Fuel (05:30 PM)</h3>
-              <div style="font-size:0.85rem; color:var(--text-muted);">Taken 45–60 minutes prior to heavy evening training</div>
-            </div>
-            <span class="meta-pill" style="color:#f43f5e; font-weight:800;">42g Protein • 370 kcal</span>
-          </div>
-          <div class="nutrient-bar-grid">
-            <div class="nutrient-stat-cell"><div class="n-label">Calories</div><div class="n-val">370 kcal</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Protein</div><div class="n-val protein">42g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Carbs</div><div class="n-val carbs">44g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Fats</div><div class="n-val fats">4g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Leucine</div><div class="n-val" style="color:#a78bfa;">4.0g</div></div>
-          </div>
-          <p><strong>Shake Components:</strong></p>
-          <ul>
-            <li><strong>Protein Base:</strong> 1.25 Scoops (38g powder) Whey Protein Isolate (yields 30g pure bioavailable protein).</li>
-            <li><strong>Liquid Base:</strong> 250ml Skim Milk or Soy Milk (+9g protein).</li>
-            <li><strong>Fast Glycogen Carb:</strong> 1 Medium Ripe Banana (110g) blended into smoothie.</li>
-            <li><strong>Electrolytes:</strong> 1/4 tsp pink Himalayan salt dissolved in shaker with 5g Creatine Monohydrate.</li>
-          </ul>
-        </div>
-
-        <!-- Meal 4 -->
-        <div class="recipe-card-box">
-          <div class="recipe-header-flex">
-            <div>
-              <h3 style="color:#60a5fa;">🍗 Meal 4: Nightly Recovery Dinner (08:30 PM)</h3>
-              <div style="font-size:0.85rem; color:var(--text-muted);">Calms nervous system and provides sustained amino acids for overnight repair</div>
-            </div>
-            <span class="meta-pill" style="color:#f43f5e; font-weight:800;">48g Protein • 570 kcal</span>
-          </div>
-          <div class="nutrient-bar-grid">
-            <div class="nutrient-stat-cell"><div class="n-label">Calories</div><div class="n-val">570 kcal</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Protein</div><div class="n-val protein">48g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Carbs</div><div class="n-val carbs">52g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Fats</div><div class="n-val fats">18g</div></div>
-            <div class="nutrient-stat-cell"><div class="n-label">Leucine</div><div class="n-val" style="color:#a78bfa;">4.1g</div></div>
-          </div>
-          <p><strong>Plate Components:</strong></p>
-          <ul>
-            <li><strong>Protein Choice:</strong> 200g Palak Chicken Saag OR 220g Pan-Tawa Masala Fish Fry (Rohu/Surmai/Basa).</li>
-            <li><strong>Carbohydrate:</strong> 200g Boiled or Roasted Sweet Potatoes (Shakarkandi) OR 2 Whole Wheat Phulkas.</li>
-            <li><strong>Salad & Healthy Fat:</strong> Large plate of sliced cucumbers, carrots, and beetroot dressed with 1 tsp olive oil, lemon, and chaat masala.</li>
-          </ul>
-        </div>
-
-        <!-- Rest Day Adjustments -->
         <div class="terminal-callout tip">
-          <div class="callout-title">🌿 Rest Day Protocol (1,950 kcal | Wed, Sat, Sun)</div>
-          <p>On rest days, energy expenditure is lower. Maintain protein strictly at 180g, but reduce carbohydrate portions:</p>
-          <ul>
-            <li><strong>Meal 1:</strong> Keep eggs identical; drop rotis from 2 to 1 (or oats from 60g to 35g).</li>
-            <li><strong>Meal 2:</strong> Reduce cooked rice from 170g to 110g; double the green salad and cucumber.</li>
-            <li><strong>Meal 3:</strong> Swap the banana for 150g hung curd (Shrikhand recipe from Ch 6) with whey.</li>
-            <li><strong>Meal 4:</strong> Swap sweet potatoes for sautéed green vegetables (shimla mirch, French beans, gobi).</li>
-          </ul>
+          <div class="callout-title">💡 Beginner Tip for Weekly Consistency</div>
+          You do not need to cook 28 separate meals every week! Notice how lunch and dinner recipes repeat strategically (e.g. Kasuri Methi Chicken Tikka, Egg Bhurji, Soya Paneer Curry). Pre-boil eggs and pre-chop onions/tomatoes for 10 minutes on Sunday to make weekday cooking effortless.
+        </div>
+
+        <!-- =============================================================
+             DAY 1: MONDAY (TRAINING DAY - UPPER A)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 1: Monday • Training Day (Upper A Workout)</h3>
+              <div class="subtext">Heavy bench pressing, rowing, and overhead strength</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill train">TRAIN DAY</span>
+              <span class="day-badge-pill">2,250 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">220g C</span>
+              <span class="day-badge-pill">70g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-egg-bhurji" class="meal-name-link">
+                🍳 Meal 1: Desi Masala Egg Bhurji with 2 Phulkas & Badam (08:00 AM)
+              </a>
+              <div class="meal-macros-inline">520 kcal • <span class="p-val">42g P</span> • <span class="c-val">46g C</span> • <span class="f-val">18.5g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Scramble:</strong> 3 whole eggs + 3 egg whites cooked in 1 tsp ghee with onions, green chilies, tomatoes, and pav bhaji masala.</li>
+              <li><strong>Carb Source:</strong> 2 whole wheat dry phulkas (60g raw atta).</li>
+              <li><strong>Micronutrient Boost:</strong> 15g raw almonds (badam) + 500ml water + morning multivitamin/D3 capsule.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-egg-bhurji" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #1) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-name-link">
+                🥗 Meal 2: Kasuri Methi Tawa Chicken Tikka with Jeera Rice (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">590 kcal • <span class="p-val">54g P</span> • <span class="c-val">55g C</span> • <span class="f-val">16g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Protein:</strong> 220g boneless chicken breast marinated in curd, kasuri methi, tandoori masala, and seared on non-stick tawa.</li>
+              <li><strong>Carb:</strong> 160g cooked fragrant jeera rice (made with 1/2 tsp cumin seeds).</li>
+              <li><strong>Salad:</strong> 150g crunchy cucumber, tomato, onion kachumber with lemon and chaat masala.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #2) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-banana-whey-shake" class="meal-name-link">
+                🥤 Meal 3: Rapid Anabolic Banana-Whey Pre/Post-Workout Smoothie (05:30 PM)
+              </a>
+              <div class="meal-macros-inline">360 kcal • <span class="p-val">38g P</span> • <span class="c-val">44g C</span> • <span class="f-val">4g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Shake:</strong> 1.25 scoops (38g powder) whey isolate + 250ml skim milk + 1 ripe banana + 5g creatine monohydrate + pinch of cinnamon.</li>
+              <li><strong>Timing:</strong> Consume 45 minutes prior to your evening Upper A workout or immediately post-training.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-banana-whey-shake" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #7) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-soya-paneer-curry" class="meal-name-link">
+                🥘 Meal 4: Kadhai Soya Chunks & Low-Fat Paneer Curry with 2 Phulkas (08:45 PM)
+              </a>
+              <div class="meal-macros-inline">780 kcal • <span class="p-val">48g P</span> • <span class="c-val">75g C</span> • <span class="f-val">20g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Curry:</strong> 45g dry soya chunks (boiled & squeezed dry) + 100g low-fat paneer simmered in kadhai onion-tomato gravy with capsicum.</li>
+              <li><strong>Carbs & Dairy:</strong> 2 warm phulkas + 100g fresh cold dahi (curd) + sliced cucumber.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-soya-paneer-curry" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #5) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 2: TUESDAY (TRAINING DAY - LOWER A)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 2: Tuesday • Training Day (Lower A Workout)</h3>
+              <div class="subtext">Heavy barbell squats, Romanian deadlifts, and walking lunges</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill train">TRAIN DAY</span>
+              <span class="day-badge-pill">2,250 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">220g C</span>
+              <span class="day-badge-pill">70g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-masala-oats" class="meal-name-link">
+                🥣 Meal 1: High-Protein Masala Oats with Egg Whites & Veggies (08:00 AM)
+              </a>
+              <div class="meal-macros-inline">490 kcal • <span class="p-val">40g P</span> • <span class="c-val">52g C</span> • <span class="f-val">12g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Savory Oats:</strong> 55g rolled oats simmered in turmeric, cumin, capsicum, and onions, with 1 whole egg + 4 egg whites drizzled into the broth.</li>
+              <li><strong>Healthy Fat:</strong> 10g crushed walnuts on top + 1 glass lemon water.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-masala-oats" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #3) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-tari-chicken" class="meal-name-link">
+                🍗 Meal 2: Homestyle Tari Wali Chicken Curry with Steamed Rice (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">610 kcal • <span class="p-val">50g P</span> • <span class="c-val">62g C</span> • <span class="f-val">16g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Chicken Curry:</strong> 220g chicken breast pressure-cooked in a light, fragrant onion-tomato broth with whole spices.</li>
+              <li><strong>Rice:</strong> 170g steamed white basmati rice.</li>
+              <li><strong>Side:</strong> 100g low-fat dahi sprinkled with roasted jeera powder + onion rings.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-tari-chicken" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #8) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-chana-egg-chaat" class="meal-name-link">
+                🥗 Meal 3: Roasted Chana & Boiled Egg Whites Chaat (05:30 PM)
+              </a>
+              <div class="meal-macros-inline">350 kcal • <span class="p-val">38g P</span> • <span class="c-val">36g C</span> • <span class="f-val">5g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Chaat Bowl:</strong> 6 boiled egg whites cubed + 50g roasted chana tossed with diced onion, tomato, lemon juice, chaat masala, and green chili.</li>
+              <li><strong>Hydration:</strong> 1 large glass warm black coffee or green tea + 5g creatine monohydrate.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-chana-egg-chaat" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #9) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-palak-chicken" class="meal-name-link">
+                🥬 Meal 4: Palak Chicken Saag Bowl with 2 Phulkas (08:45 PM)
+              </a>
+              <div class="meal-macros-inline">800 kcal • <span class="p-val">52g P</span> • <span class="c-val">70g C</span> • <span class="f-val">22g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Saag Bowl:</strong> 220g chicken breast cooked in vibrant blanched spinach puree with garlic, ginger, and cumin.</li>
+              <li><strong>Carb:</strong> 2 dry phulkas (60g atta) + 1 small katori (100g) cooked dal or cucumber salad.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-palak-chicken" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #4) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 3: WEDNESDAY (REST DAY - ACTIVE RECOVERY)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 3: Wednesday • Rest Day (Active Recovery)</h3>
+              <div class="subtext">8,000–10,000 steps walking, mobility work, systemic fat burning</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill rest">REST DAY</span>
+              <span class="day-badge-pill">1,950 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">150g C</span>
+              <span class="day-badge-pill">65g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-besan-paneer-cheela" class="meal-name-link">
+                🥞 Meal 1: High-Protein Besan & Grated Paneer Cheela with Green Chutney (08:30 AM)
+              </a>
+              <div class="meal-macros-inline">480 kcal • <span class="p-val">42g P</span> • <span class="c-val">44g C</span> • <span class="f-val">14g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Cheela:</strong> 2 crisp besan crepes (60g flour) stuffed with 120g grated low-fat paneer, green chilies, and onions.</li>
+              <li><strong>Condiment:</strong> 2 tbsp homemade mint-coriander green chutney + 1 cup unsweetened black tea.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-besan-paneer-cheela" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #10) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-soya-paneer-curry" class="meal-name-link">
+                🍲 Meal 2: Kadhai Soya Chunks & Paneer Curry with 1 Phulka & Big Salad (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">530 kcal • <span class="p-val">48g P</span> • <span class="c-val">52g C</span> • <span class="f-val">14g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Curry:</strong> 45g dry soya chunks (boiled/squeezed) + 100g low-fat paneer in rich tomato-kadhai gravy.</li>
+              <li><strong>Lower Carb Portions:</strong> 1 dry whole wheat phulka + 200g big cucumber, tomato, radish salad.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-soya-paneer-curry" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #5) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-whey-shrikhand" class="meal-name-link">
+                🍨 Meal 3: Anabolic Kesar-Elaichi Dahi & Whey Shrikhand Bowl (05:00 PM)
+              </a>
+              <div class="meal-macros-inline">380 kcal • <span class="p-val">42g P</span> • <span class="c-val">28g C</span> • <span class="f-val">9g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Bowl:</strong> 200g thick hung curd whipped with 1 scoop vanilla/kulfi whey isolate, saffron, cardamom, and 15g sliced badam.</li>
+              <li><strong>Rest Day Satiety:</strong> Super creamy, sweet dessert texture that keeps you 100% satisfied without touching sugar.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-whey-shrikhand" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #11) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-tawa-fish" class="meal-name-link">
+                🐟 Meal 4: Pan-Tawa Fish Fry with Sautéed Veggies & Mint Raita (08:30 PM)
+              </a>
+              <div class="meal-macros-inline">560 kcal • <span class="p-val">48g P</span> • <span class="c-val">26g C</span> • <span class="f-val">18g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Fish:</strong> 220g boneless fish fillet (Surmai / Rohu / Tilapia) seasoned with ajwain, besan, Kashmiri chili, seared in 1.5 tsp mustard oil.</li>
+              <li><strong>Sides:</strong> Stir-fried bell peppers, onions + 100g low-fat dahi with mint and black salt. Zero grains for restful overnight sleep.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-tawa-fish" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #6) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 4: THURSDAY (TRAINING DAY - UPPER B)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 4: Thursday • Training Day (Upper B Workout)</h3>
+              <div class="subtext">Overhead press, pull-ups/lat pulldowns, incline dumbbell presses, lateral raises</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill train">TRAIN DAY</span>
+              <span class="day-badge-pill">2,250 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">220g C</span>
+              <span class="day-badge-pill">70g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-egg-bhurji" class="meal-name-link">
+                🍳 Meal 1: Desi Masala Egg Bhurji with 2 Phulkas (08:00 AM)
+              </a>
+              <div class="meal-macros-inline">520 kcal • <span class="p-val">42g P</span> • <span class="c-val">46g C</span> • <span class="f-val">18.5g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Scramble:</strong> 3 whole eggs + 3 egg whites with onions, tomatoes, and green chilies.</li>
+              <li><strong>Carb:</strong> 2 dry whole wheat phulkas + 15g almonds.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-egg-bhurji" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #1) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-rajma-soya-pulao" class="meal-name-link">
+                🍛 Meal 2: High-Protein Rajma & Soya Chunks Pulao with Raita (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">610 kcal • <span class="p-val">48g P</span> • <span class="c-val">72g C</span> • <span class="f-val">12g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>One-Pot Pulao:</strong> 100g boiled rajma + 40g dry soya chunks (boiled/squeezed) + 50g basmati rice cooked in biryani spices.</li>
+              <li><strong>Accompaniment:</strong> 100g cool cucumber dahi raita + sliced raw onions.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-rajma-soya-pulao" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #12) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-cold-coffee-shake" class="meal-name-link">
+                ☕ Meal 3: Chilled Cold Coffee Whey Protein Shake (05:30 PM)
+              </a>
+              <div class="meal-macros-inline">340 kcal • <span class="p-val">38g P</span> • <span class="c-val">36g C</span> • <span class="f-val">4g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Stimulant Shake:</strong> 1.25 scoops chocolate whey isolate + 1.5 tsp instant coffee + 250ml chilled milk + 1 small banana + 5g creatine.</li>
+              <li><strong>Purpose:</strong> Fires up central nervous system 45 mins before Upper B workout.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-cold-coffee-shake" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #13) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-name-link">
+                🍗 Meal 4: Tawa Grilled Kasuri Methi Chicken with 2 Phulkas & Salad (08:45 PM)
+              </a>
+              <div class="meal-macros-inline">780 kcal • <span class="p-val">52g P</span> • <span class="c-val">66g C</span> • <span class="f-val">19g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Chicken Tikka:</strong> 220g seared chicken breast cubes with smoky kasuri methi crust.</li>
+              <li><strong>Carbs & Fiber:</strong> 2 whole wheat phulkas + 1 katori dal tadka + large bowl of kachumber salad.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #2) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 5: FRIDAY (TRAINING DAY - LOWER B)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 5: Friday • Training Day (Lower B Workout)</h3>
+              <div class="subtext">Deadlifts, leg press, hamstring curls, calf raises</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill train">TRAIN DAY</span>
+              <span class="day-badge-pill">2,250 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">220g C</span>
+              <span class="day-badge-pill">70g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-boiled-eggs-toast" class="meal-name-link">
+                🍞 Meal 1: Boiled Eggs & Spiced Bhuna Paneer Toast (08:00 AM)
+              </a>
+              <div class="meal-macros-inline">510 kcal • <span class="p-val">42g P</span> • <span class="c-val">46g C</span> • <span class="f-val">16g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Toast Stack:</strong> 2 slices multigrain bread topped with 80g tawa-seared paneer cubes and 2 whole boiled eggs + 3 boiled egg whites.</li>
+              <li><strong>Sides:</strong> 15g almonds + warm lemon ginger tea.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-boiled-eggs-toast" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #14) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-name-link">
+                🥗 Meal 2: Kasuri Methi Chicken Tikka with Jeera Rice & Dahi (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">590 kcal • <span class="p-val">52g P</span> • <span class="c-val">55g C</span> • <span class="f-val">16g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Protein:</strong> 220g juicy grilled chicken tikka cubes.</li>
+              <li><strong>Rice:</strong> 160g cooked jeera rice + 100g low-fat curd + diced onions & cucumber.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-chicken-tikka" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #2) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-banana-whey-shake" class="meal-name-link">
+                🍌 Meal 3: Rapid Anabolic Banana-Whey Smoothie (05:30 PM)
+              </a>
+              <div class="meal-macros-inline">360 kcal • <span class="p-val">38g P</span> • <span class="c-val">44g C</span> • <span class="f-val">4g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Fuel:</strong> 1.25 scoops whey isolate + 250ml skim milk + 1 medium banana + 5g creatine.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-banana-whey-shake" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #7) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-dhaba-egg-curry" class="meal-name-link">
+                🍲 Meal 4: Dhaba-Style Tari Wali Egg Curry with 2 Phulkas (08:45 PM)
+              </a>
+              <div class="meal-macros-inline">790 kcal • <span class="p-val">48g P</span> • <span class="c-val">75g C</span> • <span class="f-val">22g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Curry:</strong> 2 whole eggs + 5 boiled whites blistered in oil and simmered in Punjabi onion-tomato gravy.</li>
+              <li><strong>Carbs:</strong> 2 whole wheat phulkas + 1 bowl yellow moong dal + green chili.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-dhaba-egg-curry" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #15) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 6: SATURDAY (REST DAY - ACTIVE RECOVERY)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 6: Saturday • Rest Day (Active Recovery & Stretch)</h3>
+              <div class="subtext">Morning brisk outdoor walk, foam rolling, digestive decompression</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill rest">REST DAY</span>
+              <span class="day-badge-pill">1,950 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">150g C</span>
+              <span class="day-badge-pill">65g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-masala-oats" class="meal-name-link">
+                🥣 Meal 1: High-Protein Masala Oats with Egg Whites & Veggies (08:30 AM)
+              </a>
+              <div class="meal-macros-inline">480 kcal • <span class="p-val">40g P</span> • <span class="c-val">52g C</span> • <span class="f-val">12g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Oats:</strong> 55g rolled oats with 1 whole egg + 4 egg whites cooked into warm savory masala porridge.</li>
+              <li><strong>Nuts:</strong> 15g raw almonds.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-masala-oats" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #3) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-moong-khichdi" class="meal-name-link">
+                🍲 Meal 2: High-Protein Moong Dal & Paneer Khichdi with Dahi (01:00 PM)
+              </a>
+              <div class="meal-macros-inline">540 kcal • <span class="p-val">48g P</span> • <span class="c-val">60g C</span> • <span class="f-val">11g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Khichdi:</strong> 50g yellow moong dal + 30g rice pressure-cooked with ghee and hing, topped with 120g fresh paneer cubes.</li>
+              <li><strong>Digestive Support:</strong> 100g cold dahi + fresh cucumber slices.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-moong-khichdi" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #16) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-whey-shrikhand" class="meal-name-link">
+                🍨 Meal 3: Anabolic Kesar-Elaichi Dahi & Whey Shrikhand Bowl (05:00 PM)
+              </a>
+              <div class="meal-macros-inline">380 kcal • <span class="p-val">42g P</span> • <span class="c-val">28g C</span> • <span class="f-val">9g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Dessert:</strong> 200g thick hung curd whipped with 1 scoop whey isolate, cardamom, kesar, and badam slices.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-whey-shrikhand" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #11) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-lemon-pepper-chicken" class="meal-name-link">
+                🍗 Meal 4: Lemon Pepper Pan-Seared Chicken with Bell Peppers (08:30 PM)
+              </a>
+              <div class="meal-macros-inline">550 kcal • <span class="p-val">50g P</span> • <span class="c-val">22g C</span> • <span class="f-val">17g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Chicken:</strong> 220g chicken breast cutlets seared with black pepper, garlic, lemon juice, and olive oil.</li>
+              <li><strong>Veggies:</strong> Sautéed tricolor bell peppers and onions + 1 small dry phulka.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-lemon-pepper-chicken" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #17) →</a>
+          </div>
+        </div>
+
+        <!-- =============================================================
+             DAY 7: SUNDAY (REST DAY - FULL RESET & WEEKLY PREP)
+             ============================================================= -->
+        <div class="day-plan-card">
+          <div class="day-plan-header">
+            <div class="day-title-wrap">
+              <h3>Day 7: Sunday • Rest Day (Weekly Meal Prep & Audit)</h3>
+              <div class="subtext">Batch boil eggs, restock grocery, complete 100-point audit scorecard</div>
+            </div>
+            <div class="day-macro-badge">
+              <span class="day-badge-pill rest">REST DAY</span>
+              <span class="day-badge-pill">1,950 kcal</span>
+              <span class="day-badge-pill" style="color:#f43f5e;">180g Protein</span>
+              <span class="day-badge-pill">150g C</span>
+              <span class="day-badge-pill">65g F</span>
+            </div>
+          </div>
+
+          <!-- Meal 1 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-besan-paneer-cheela" class="meal-name-link">
+                🥞 Meal 1: High-Protein Besan & Grated Paneer Cheela with Green Chutney (09:00 AM)
+              </a>
+              <div class="meal-macros-inline">480 kcal • <span class="p-val">42g P</span> • <span class="c-val">44g C</span> • <span class="f-val">14g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Sunday Brunch:</strong> 2 crisp besan cheelas stuffed with 120g grated low-fat paneer, served with spicy mint chutney.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-besan-paneer-cheela" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #10) →</a>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-tari-chicken" class="meal-name-link">
+                🍗 Meal 2: Homestyle Tari Wali Chicken Curry with 1 Phulka & Salad (01:30 PM)
+              </a>
+              <div class="meal-macros-inline">530 kcal • <span class="p-val">50g P</span> • <span class="c-val">42g C</span> • <span class="f-val">15g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Sunday Lunch:</strong> 220g chicken breast in slow-simmered onion-tomato gravy with 1 whole wheat phulka + 100g dahi + sliced cucumbers.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-tari-chicken" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #8) →</a>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-chana-egg-chaat" class="meal-name-link">
+                🥗 Meal 3: Roasted Chana & Boiled Egg Whites Chaat (05:00 PM)
+              </a>
+              <div class="meal-macros-inline">350 kcal • <span class="p-val">38g P</span> • <span class="c-val">36g C</span> • <span class="f-val">5g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Prep Snack:</strong> 6 boiled egg whites + 50g roasted bhuna chana + chaat masala, lemon, and onions.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-chana-egg-chaat" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #9) →</a>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-block-item">
+            <div class="meal-block-header">
+              <a href="chapter06-recipes.html#recipe-tawa-fish" class="meal-name-link">
+                🐟 Meal 4: Pan-Tawa Fish Fry with Kachumber Salad & Mint Raita (08:30 PM)
+              </a>
+              <div class="meal-macros-inline">590 kcal • <span class="p-val">50g P</span> • <span class="c-val">28g C</span> • <span class="f-val">19g F</span></div>
+            </div>
+            <ul class="meal-desc-list">
+              <li><strong>Omega-3 Reset:</strong> 220g tawa-fried fish fillet + crisp cucumber-tomato salad + 100g mint dahi raita. Light on digestion for high deep-sleep quality.</li>
+            </ul>
+            <a href="chapter06-recipes.html#recipe-tawa-fish" class="meal-recipe-cta">📖 Step-by-Step Cooking Method (Recipe #6) →</a>
+          </div>
         </div>
 
       </div>
 
+      <!-- Chapter Pager -->
       <div class="chapter-pager">
-        <a href="chapter04-macro-guide.html" class="pager-btn">← Ch 4: 180g Macro Protocol</a>
+        <a href="chapter04-macro-guide.html" class="pager-btn">← Ch 4: Macro Guide</a>
         <a href="chapter06-recipes.html" class="pager-btn">Ch 6: Indian Recipes →</a>
       </div>
+
     </article>
   </main>
 
@@ -191,7 +790,7 @@
   <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
     <a href="index.html" class="mobile-nav-btn"><span class="icon">📊</span><span>Dashboard</span></a>
     <a href="chapter04-macro-guide.html" class="mobile-nav-btn"><span class="icon">🥩</span><span>Macros</span></a>
-    <a href="chapter05-meal-plan.html" class="mobile-nav-btn active"><span class="icon">🍽️</span><span>Meal Plan</span></a>
+    <a href="chapter05-meal-plan.html" class="mobile-nav-btn active"><span class="icon">🍽️</span><span>Meals</span></a>
     <a href="chapter10-workout.html" class="mobile-nav-btn"><span class="icon">🏋️</span><span>Gym</span></a>
     <a href="chapter17-scorecard.html" class="mobile-nav-btn"><span class="icon">📋</span><span>Audit</span></a>
   </nav>

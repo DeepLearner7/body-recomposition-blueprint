@@ -4,14 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#080c14">
-  <title>Chapter 07: Master Indian Grocery List | BODY RECOMP OS</title>
+  <title>Chapter 07: Master Indian Grocery & Kitchen Setup | BODY RECOMP OS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .cart-card {
+      background: #0d1424;
+      border: 1px solid #1e2c4a;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .cart-card h4 {
+      font-size: 1.05rem;
+      color: #60a5fa;
+      font-weight: 750;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .cart-table {
+      width: 100%;
+      font-size: 0.84rem;
+      border-collapse: collapse;
+    }
+    .cart-table th {
+      text-align: left;
+      padding: 0.4rem 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    .cart-table td {
+      padding: 0.45rem 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      color: #cbd5e1;
+    }
+    .cart-table td:last-child {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: #93c5fd;
+      text-align: right;
+    }
+    .gear-checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gear-card {
+      background: #090e1a;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .gear-card h5 {
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 750;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .gear-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Top Terminal Header -->
   <header class="terminal-header">
     <div class="header-inner">
       <div class="brand-section">
@@ -27,6 +102,7 @@
     </div>
   </header>
 
+  <!-- Horizontal Sub-Navigation Bar -->
   <nav class="terminal-nav-bar" aria-label="Terminal Navigation">
     <div class="nav-pills-container">
       <a href="index.html" class="nav-pill-btn"><span>📊</span> Command Center</a>
@@ -51,57 +127,148 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
   <main class="main-terminal-container">
     <article class="chapter-article-card">
       <div class="chapter-header">
         <span class="chapter-badge">CHAPTER 07 • SUPPLY CHAIN LOGISTICS</span>
-        <h1 class="chapter-title">The Master Indian Grocery List</h1>
-        <div class="chapter-quote">"If healthy, high-protein food is in your fridge, you will eat it. The battle is won in your weekly supermarket order."</div>
+        <h1 class="chapter-title">The 7-Day Indian Master Grocery & Kitchen Setup</h1>
+        <div class="chapter-quote">
+          "If nutritious, high-protein food is in your fridge and pantry, you will eat it. 
+          The battle of body recomposition is won during your 10-minute Sunday grocery order."
+        </div>
       </div>
 
       <div class="chapter-content">
-        <h3>🥩 1. Complete Proteins (Buy Weekly via Zepto / Local Market)</h3>
-        <div class="terminal-table-wrap">
-          <table class="terminal-table">
-            <thead>
-              <tr><th>Item</th><th>Weekly Quantity</th><th>Household Notes</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Skinless Chicken Breast</strong></td><td>2.0 – 2.2 kg</td><td>Ask butcher for boneless breast fillets or order online.</td></tr>
-              <tr><td><strong>Farm Fresh Whole Eggs</strong></td><td>2 to 3 Dozen (24–36 eggs)</td><td>Daily morning scramble and emergency boiled snacks.</td></tr>
-              <tr><td><strong>Low-Fat Paneer / Tofu</strong></td><td>400g – 500g</td><td>Amul or Mother Dairy low-fat paneer (100g = ~18g protein).</td></tr>
-              <tr><td><strong>Soya Chunks (Nutrela / Fortune)</strong></td><td>1 Pack (200g–500g)</td><td>Cost-effective plant protein (52g protein per 100g dry).</td></tr>
-              <tr><td><strong>Fresh Fish (Rohu / Surmai / Basa)</strong></td><td>400g – 500g</td><td>Cleaned fillets for bi-weekly omega-3 dinners.</td></tr>
-              <tr><td><strong>Greek Yogurt / Thick Curd (Dahi)</strong></td><td>1.0 – 1.5 kg</td><td>Epigamia Greek Yogurt or hung homemade curd.</td></tr>
-              <tr><td><strong>Whey Protein Isolate Powder</strong></td><td>1 kg Tub (Monthly)</td><td>Pre/post-workout shake (e.g., Optimum Nutrition, MuscleBlaze).</td></tr>
-            </tbody>
-          </table>
+
+        <!-- Beginner Rule Callout -->
+        <div class="terminal-callout important">
+          <div class="callout-title">🛒 The 1-Person 7-Day Recomp Cart Strategy</div>
+          This list provides the <strong>exact quantities</strong> required to execute the 7-day meal plan (180g protein daily, calorie cycling between 2,250 kcal and 1,950 kcal). You can order everything on Blinkit, Zepto, Swiggy Instamart, or your local kirana and mandi in a single delivery.
         </div>
 
-        <h3>🍚 2. Clean Performance Carbohydrates</h3>
-        <ul>
-          <li><strong>Whole Wheat Flour (Chakki Atta):</strong> 5 kg bag (Aashirvaad / local mill).</li>
-          <li><strong>Basmati or Sona Masoori Rice:</strong> 2 kg bag. Fast-digesting, hypoallergenic workout lunch fuel.</li>
-          <li><strong>Rolled Oats (Jav):</strong> 1 kg bag (True Elements / Quaker Rolled Oats).</li>
-          <li><strong>Sweet Potatoes (Shakarkandi):</strong> 1.5 kg from local mandi. High potassium for muscle contractility.</li>
-          <li><strong>Fresh Bananas:</strong> 7 bananas (pre-workout rapid glucose).</li>
-        </ul>
+        <!-- Master Cart Grid -->
+        <div class="cart-grid">
 
-        <h3>🥑 3. Healthy Fats, Spices & Sabzi Mandi Greens</h3>
-        <ul>
-          <li><strong>Cold-Pressed Mustard Oil & Desi Ghee:</strong> Measured strictly with teaspoons.</li>
-          <li><strong>Raw Badam (Almonds) & Walnuts (Akhrot):</strong> 250g bag.</li>
-          <li><strong>Vegetables (Buy Twice Weekly):</strong> 1 kg Palak (spinach), 500g Shimla Mirch (capsicum), 1 kg Tomatoes, 1 kg Red Onions, 1 kg Cucumbers, 8 Lemons, Ginger & Garlic.</li>
-        </ul>
+          <!-- Category 1: Complete Proteins -->
+          <div class="cart-card">
+            <h4>🍗 1. Weekly Protein Staples</h4>
+            <table class="cart-table">
+              <thead><tr><th>Item</th><th>Purpose</th><th>Qty for 7 Days</th></tr></thead>
+              <tbody>
+                <tr><td>Skinless Chicken Breast</td><td>Tikka, Curry, Saag</td><td>2.0 – 2.2 kg</td></tr>
+                <tr><td>Fresh Farm Eggs</td><td>Bhurji, Boiled Chaat</td><td>3 to 4 Dozen (36–42)</td></tr>
+                <tr><td>Low-Fat Paneer (Amul/Mother Dairy)</td><td>Curry, Cheela, Khichdi</td><td>500g</td></tr>
+                <tr><td>Soya Chunks (Nutrela)</td><td>Pulao, Kadhai Curry</td><td>1 Pack (200g–500g)</td></tr>
+                <tr><td>Fish Fillets (Surmai / Rohu / Tilapia)</td><td>Tawa Fish Dinners</td><td>500g (boneless)</td></tr>
+                <tr><td>Thick Curd / Greek Yogurt (Dahi)</td><td>Marinade, Raita, Shrikhand</td><td>1.5 – 2.0 kg</td></tr>
+                <tr><td>Whey Protein Isolate</td><td>Daily Anabolic Smoothies</td><td>1 kg Tub (Monthly)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Category 2: Fresh Produce & Sabzi Mandi -->
+          <div class="cart-card">
+            <h4>🥦 2. Fresh Produce & Greens</h4>
+            <table class="cart-table">
+              <thead><tr><th>Item</th><th>Purpose</th><th>Qty for 7 Days</th></tr></thead>
+              <tbody>
+                <tr><td>Red Onions (Pyaaz)</td><td>Daily gravies, bhurji, salads</td><td>2.0 kg</td></tr>
+                <tr><td>Tomatoes (Tamatar)</td><td>Curries, salads, chaat</td><td>2.0 kg</td></tr>
+                <tr><td>Fresh Spinach (Palak)</td><td>Palak Chicken Saag</td><td>500g (washed)</td></tr>
+                <tr><td>Green / Colored Capsicum</td><td>Tikka, Cheela, Stir-fry</td><td>500g (3–4 peppers)</td></tr>
+                <tr><td>Cucumbers (Kheera)</td><td>Daily kachumber & raita</td><td>1.5 kg</td></tr>
+                <tr><td>Fresh Lemons (Nimbu)</td><td>Marinade, digestion, vitamin C</td><td>10–12 units</td></tr>
+                <tr><td>Ginger & Garlic</td><td>Base paste for all curries</td><td>200g each (or paste)</td></tr>
+                <tr><td>Fresh Coriander & Mint</td><td>Garnishing & green chutney</td><td>1 large bunch each</td></tr>
+                <tr><td>Ripe Bananas</td><td>Pre/post workout smoothies</td><td>7 bananas</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Category 3: Clean Performance Carbohydrates -->
+          <div class="cart-card">
+            <h4>🍚 3. Complex Carbohydrates</h4>
+            <table class="cart-table">
+              <thead><tr><th>Item</th><th>Purpose</th><th>Qty for 7 Days</th></tr></thead>
+              <tbody>
+                <tr><td>Whole Wheat Atta</td><td>Daily fresh phulkas</td><td>2 kg bag</td></tr>
+                <tr><td>Basmati / Sona Masoori Rice</td><td>Jeera rice, steamed rice</td><td>1.5 kg bag</td></tr>
+                <tr><td>Rolled Oats (Plain)</td><td>Savory masala breakfast oats</td><td>500g bag</td></tr>
+                <tr><td>Yellow Moong Dal (Split)</td><td>High-protein rest day khichdi</td><td>500g pack</td></tr>
+                <tr><td>Rajma (Red Kidney Beans)</td><td>High-protein Sunday pulao</td><td>500g pack</td></tr>
+                <tr><td>Besan (Gram Flour)</td><td>Breakfast cheela & fish crust</td><td>500g pack</td></tr>
+                <tr><td>Roasted Chana (Bhuna with peel)</td><td>Crunchy evening office snack</td><td>500g bag</td></tr>
+                <tr><td>Multigrain Bread</td><td>Paneer & egg toast breakfast</td><td>1 small loaf</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Category 4: Spices, Oils & Nuts -->
+          <div class="cart-card">
+            <h4>🌶️ 4. Fats, Spices & Nuts</h4>
+            <table class="cart-table">
+              <thead><tr><th>Item</th><th>Purpose</th><th>Monthly Stock</th></tr></thead>
+              <tbody>
+                <tr><td>Cold-Pressed Mustard Oil</td><td>High smoke point cooking</td><td>1 Liter bottle</td></tr>
+                <tr><td>Pure Desi Cow Ghee</td><td>Breakfast & khichdi tadka</td><td>500g jar</td></tr>
+                <tr><td>Raw Almonds (Badam)</td><td>Daily healthy fats & vitamin E</td><td>250g bag</td></tr>
+                <tr><td>Whole Walnuts (Akhrot)</td><td>Plant omega-3 fatty acids</td><td>150g bag</td></tr>
+                <tr><td>Kasuri Methi (Crushed leaves)</td><td>Restaurant aroma in home tikka</td><td>1 box (100g)</td></tr>
+                <tr><td>Essential Spices</td><td>Jeera, Haldi, Dhaniya, Kashmiri Chili, Pav Bhaji Masala, Garam Masala, Chaat Masala</td><td>100g boxes each</td></tr>
+                <tr><td>Instant Coffee (Nescafe/Bru)</td><td>Pre-workout cold coffee shake</td><td>50g jar</td></tr>
+                <tr><td>Creatine Monohydrate (Creapure)</td><td>Daily 5g muscle cell hydration</td><td>250g jar</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- =============================================================
+             BEGINNER KITCHEN EQUIPMENT CHECKLIST
+             ============================================================= -->
+        <h3 style="margin-top: 2.5rem; color: #fff;">🍳 The Beginner Cook's 6-Piece Hardware Arsenal</h3>
+        <p style="color: var(--text-muted);">You do not need an expensive chef's kitchen. To cook every meal in this blueprint in under 15 minutes, you only need these 6 basic tools:</p>
+
+        <div class="gear-checklist-grid">
+          <div class="gear-card">
+            <h5>⚖️ 1. Digital Food Scale (₹350–₹500)</h5>
+            <p>The single most critical purchase for body recomposition. Eliminates guesswork. Weighs your chicken raw (220g), rice cooked (160g), and almonds (15g) accurately.</p>
+          </div>
+          <div class="gear-card">
+            <h5>🍳 2. Heavy 28cm Non-Stick Tawa</h5>
+            <p>Allows searing chicken tikka, frying fish, and cooking besan cheelas with strictly 1 level teaspoon of oil without sticking or tearing.</p>
+          </div>
+          <div class="gear-card">
+            <h5>🍲 3. Deep Kadhai with Glass Lid (2–3L)</h5>
+            <p>Essential for egg bhurji, soya chunks curry, and palak chicken. The glass lid traps moisture so chicken breasts steam to juicy perfection.</p>
+          </div>
+          <div class="gear-card">
+            <h5>💨 4. 2–3L Pressure Cooker</h5>
+            <p>Your weekday speed secret: turns tari chicken, moong dal khichdi, and rajma pulao into foolproof 2-whistle, 12-minute meals.</p>
+          </div>
+          <div class="gear-card">
+            <h5>🥄 5. Standard Measuring Spoons (5ml / 15ml)</h5>
+            <p>Prevents the fatal 200 kcal oil leak. 1 measured level teaspoon is exactly 5ml (45 kcal). Never free-pour directly from a bottle!</p>
+          </div>
+          <div class="gear-card">
+            <h5>🌪️ 6. Smoothie Blender or Shaker Bottle</h5>
+            <p>Blends banana-whey shakes and cold coffee in 30 seconds with zero chalky lumps. Keep a blender cup dedicated to your post-workout smoothies.</p>
+          </div>
+        </div>
+
       </div>
 
+      <!-- Chapter Pager -->
       <div class="chapter-pager">
         <a href="chapter06-recipes.html" class="pager-btn">← Ch 6: Indian Recipes</a>
-        <a href="chapter08-meal-prep.html" class="pager-btn">Ch 8: 90-Min Meal Prep →</a>
+        <a href="chapter08-meal-prep.html" class="pager-btn">Ch 8: Meal Prep Guide →</a>
       </div>
+
     </article>
   </main>
 
+  <!-- Mobile Bottom Navigation Bar -->
   <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
     <a href="index.html" class="mobile-nav-btn"><span class="icon">📊</span><span>Dashboard</span></a>
     <a href="chapter06-recipes.html" class="mobile-nav-btn"><span class="icon">🍽️</span><span>Recipes</span></a>
