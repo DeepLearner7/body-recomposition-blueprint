@@ -10,7 +10,7 @@
 * **Height:** 184 cm (~6'0.5")
 * **Current Weight:** 85 kg (~187 lbs)
 * **Training Status:** Novice / Just starting out (High sensitivity to hypertrophic stimuli)
-* **Dietary Protocol:** Omnivore (Chicken, fish, eggs, dairy, whey, legumes, whole grains)
+* **Dietary Protocol:** Omnivore (100% Seafood-Free / Fish-Allergy Safe — Chicken, eggs, low-fat paneer, dahi, soya, whey isolate, legumes, whole grains, algal omega-3)
 * **Training Split:** 4-Day Upper/Lower Split (Commercial Gym equipment: barbells, dumbbells, cables, machines)
 * **Primary Target:** Simultaneous fat loss and lean muscle accrual (Body Recomposition)
 
