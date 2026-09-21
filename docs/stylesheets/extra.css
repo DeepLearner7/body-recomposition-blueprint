@@ -1,0 +1,91 @@
+/* Custom CSS for Body Recomposition Blueprint */
+
+:root {
+  --md-primary-fg-color: #2b4c7e;
+  --md-primary-fg-color--light: #3d6cb9;
+  --md-primary-fg-color--dark: #1b2f4f;
+  --md-accent-fg-color: #ff6f3c;
+}
+
+/* Metric highlight cards */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.metric-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.metric-card .metric-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--md-default-fg-color--lighter);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.metric-card .metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.2rem;
+}
+
+.metric-card .metric-sub {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Table styling improvements */
+.md-typeset table:not([class]) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+/* Workout badges */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-primary {
+  background-color: rgba(43, 76, 126, 0.12);
+  color: #2b4c7e;
+}
+
+.badge-accent {
+  background-color: rgba(255, 111, 60, 0.15);
+  color: #d9531e;
+}
+
+.badge-success {
+  background-color: rgba(46, 125, 50, 0.15);
+  color: #2e7d32;
+}

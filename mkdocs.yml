@@ -1,0 +1,85 @@
+site_name: Body Recomposition Blueprint
+site_description: A scientific, personalized manual for body recomposition, muscle hypertrophy, and sustainable fat loss.
+site_author: Blueprint Fitness
+site_url: https://body-recomposition-blueprint.local
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Command Center: dashboard.md
+  - Module 1 - Foundations & Science:
+      - Chapter 1 - Welcome & Blueprint Roadmap: chapter01-welcome.md
+      - Chapter 2 - The Science of Body Recomposition: chapter02-science.md
+      - References & Scientific Literature: references.md
+  - Module 2 - Nutrition & Meal Architecture:
+      - Chapter 3 - Caloric Balance & TDEE Calculations: chapter03-nutrition.md
+      - Chapter 4 - The 180g Macro Protocol: chapter04-macro-guide.md
+      - Chapter 5 - The 4-Meal Daily Blueprint: chapter05-meal-plan.md
+      - Chapter 6 - High-Protein Quick Recipes: chapter06-recipes.md
+      - Chapter 7 - The Master Grocery List: chapter07-grocery.md
+      - Chapter 8 - The 90-Minute Weekly Meal Prep: chapter08-meal-prep.md
+      - Chapter 9 - Office Nutrition & Desk-Job Tactics: chapter09-office-nutrition.md
+  - Module 3 - Training & Exercise Library:
+      - Chapter 10 - The 4-Day Upper/Lower Split: chapter10-workout.md
+      - Chapter 11 - Exercise Library & Movement Cues: chapter11-exercise-library.md
+  - Module 4 - Recovery, Supplements & Optimization:
+      - Chapter 12 - Sleep & Nervous System Recovery: chapter12-recovery.md
+      - Chapter 13 - The Evidence-Based Supplement Stack: chapter13-supplements.md
+  - Module 5 - Tracking, FAQ & Maintenance:
+      - Chapter 14 - Measuring True Progress (The 3-Metric Rule): chapter14-progress.md
+      - Chapter 15 - Troubleshooting & FAQ: chapter15-faq.md
+      - Chapter 16 - Long-Term Maintenance: chapter16-maintenance.md
+      - Chapter 17 - The Weekly Audit Scorecard: chapter17-scorecard.md
