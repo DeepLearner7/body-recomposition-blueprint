@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigationTabs();
   initModeToggle();
   initScorecardCalculator();
-  initFloatingRestTimer();
 });
 
 // --- 1. Navigation Tabs Routing ---
@@ -85,59 +84,3 @@ function initScorecardCalculator() {
   updateScore();
 }
 
-// --- 4. Floating Rest Timer ---
-let timerCount = 90;
-let timerRunning = false;
-let timerId = null;
-
-function initFloatingRestTimer() {
-  const display = document.getElementById('restTimerDisplay');
-  const playBtn = document.getElementById('restTimerPlayBtn');
-  const presetChips = document.querySelectorAll('.timer-chip');
-
-  function renderTimer() {
-    if (!display) return;
-    const m = Math.floor(timerCount / 60);
-    const s = timerCount % 60;
-    display.textContent = `${m}:${s < 10 ? '0' : ''}${s}`;
-  }
-
-  if (playBtn) {
-    playBtn.addEventListener('click', () => {
-      if (timerRunning) {
-        clearInterval(timerId);
-        timerRunning = false;
-        playBtn.textContent = '▶';
-      } else {
-        timerRunning = true;
-        playBtn.textContent = '⏸';
-        timerId = setInterval(() => {
-          if (timerCount > 0) {
-            timerCount--;
-            renderTimer();
-          } else {
-            clearInterval(timerId);
-            timerRunning = false;
-            playBtn.textContent = '▶';
-            if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
-            alert('⏰ Rest complete! Next set ready.');
-          }
-        }, 1000);
-      }
-    });
-  }
-
-  presetChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      clearInterval(timerId);
-      timerRunning = false;
-      if (playBtn) playBtn.textContent = '▶';
-      timerCount = parseInt(chip.getAttribute('data-sec'), 10) || 90;
-      presetChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      renderTimer();
-    });
-  });
-
-  renderTimer();
-}

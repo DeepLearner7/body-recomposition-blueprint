@@ -18,14 +18,11 @@
 
 ## 🎨 Web App Features
 
-* **Vibrant Bubble & Material Design System:** Soft rounded cards, luminous gradients, and interactive ripple micro-interactions.
-* **Mobile-First & App-Like:** Bottom navigation bar on smartphones, responsive tap targets, and touch-optimized layout.
-* **Interactive Day Switcher:** Toggle between **Training Day (2,250 kcal)** and **Rest Day (1,950 kcal)** to see macros, badges, and meals adjust in real time.
-* **4-Meal Rich Cards with High-Res Photography:** Gram-for-gram meal recipes (scramble, chicken/rice prep, anabolic shake, salmon dinner).
-* **Interactive 4-Day Workout Split:** Upper A, Lower A, Upper B, and Lower B with sets, reps, and cues.
-* **Built-in Gym Rest Timer:** Floating timer with 60s, 90s, and 120s presets and vibration alerts.
-* **Dynamic 100-Point Audit Scorecard:** Live-tallying weekly scorecard that grades adherence in real time.
-* **Dark / Light Mode:** Obsidian dark theme or clean vibrant light theme with localStorage persistence.
+* **Dark Terminal OS UI:** High-contrast obsidian slate surfaces (`#080c14` / `#131b2e`), monospace accents, and clean card hierarchy.
+* **17 Dedicated Chapter Pages + Dashboard:** Every chapter has its own standalone HTML page controlled via top pill navigation and mobile bottom bar.
+* **Detailed Indian Household Recipes:** Gram-for-gram recipes with macro breakdowns (Calories, P, C, F, Fiber, Leucine) for cooking on tawa/kadhai in an Indian kitchen.
+* **Mobile-First & Responsive:** Touch-friendly top navigation pills, mobile bottom bar, and overflow-scrolling data tables.
+* **Dynamic 100-Point Audit Scorecard:** Live-tallying weekly audit in Chapter 17 grading adherence in real time.
 
 ---
 
